@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academician Giyas Umarov — Founder of Heliotechnology in Uzbekistan</title>
+<meta name="description" content="Memorial website for Academician Giyas Yakubovich Umarov (1926–1998), pioneering Soviet/Uzbek nuclear physicist and founder of heliotechnology (solar energy science) in Uzbekistan.">
+
+<!-- OG Meta -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academician Giyas Umarov — Founder of Heliotechnology in Uzbekistan">
+<meta property="og:description" content="Memorial website honoring Giyas Yakubovich Umarov, pioneering nuclear physicist and founder of solar energy science in Uzbekistan. His research was 50–60 years ahead of its time.">
+<meta property="og:image" content="/og-image.png">
+<meta property="og:url" content="https://giyasumarov.org">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Academician Giyas Umarov — Founder of Heliotechnology">
+<meta name="twitter:description" content="Pioneering nuclear physicist and founder of solar energy science in Uzbekistan.">
+<meta name="twitter:image" content="/og-image.png">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- Vercel Analytics -->
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+
+<style>
+/* ===== CSS RESET & VARIABLES ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0a1628;
+  --navy-light: #162240;
+  --gold: #d4a520;
+  --gold-light: #f0c850;
+  --amber: #e8922a;
+  --orange: #e06020;
+  --cream: #faf5eb;
+  --cream-dark: #f0e8d8;
+  --white: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-muted: #555566;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lato', -apple-system, sans-serif;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.18);
+  --transition: 0.3s ease;
+}
+
+/* Light theme (default) */
+[data-theme="light"] {
+  --bg: var(--cream);
+  --bg-alt: var(--cream-dark);
+  --bg-card: var(--white);
+  --text: var(--text-dark);
+  --text-secondary: var(--text-muted);
+  --border: rgba(0,0,0,0.08);
+  --nav-bg: rgba(250,245,235,0.92);
+  --section-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  --infobox-bg: #f8f3e8;
+  --infobox-border: var(--gold);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --bg-alt: #111118;
+  --bg-card: rgba(20,20,35,0.7);
+  --text: #e8e4df;
+  --text-secondary: #9a9aaa;
+  --border: rgba(255,255,255,0.08);
+  --nav-bg: rgba(10,10,15,0.88);
+  --section-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  --infobox-bg: rgba(22,34,64,0.5);
+  --infobox-border: var(--gold);
+}
+
+[data-theme="dark"] .section-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: clamp(16px, 1.1vw, 18px);
+  transition: background var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.25; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 0.5em; color: var(--text); }
+h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin-bottom: 0.4em; }
+p { margin-bottom: 1em; }
+a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--amber); }
+
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 1.5rem; height: 60px;
+}
+.nav-brand {
+  font-family: var(--font-serif); font-weight: 700;
+  font-size: 1.1rem; color: var(--gold);
+  white-space: nowrap;
+}
+.nav-links { display: flex; gap: 0.2rem; align-items: center; flex-wrap: nowrap; overflow-x: auto; }
+.nav-links a {
+  color: var(--text-secondary); font-size: 0.82rem; font-weight: 400;
+  padding: 0.5rem 0.6rem; border-radius: 6px; white-space: nowrap;
+  min-height: 44px; display: flex; align-items: center;
+  transition: color var(--transition), background var(--transition);
+}
+.nav-links a:hover { color: var(--gold); background: rgba(212,165,32,0.08); }
+.theme-toggle {
+  background: none; border: 2px solid var(--border); border-radius: 50%;
+  width: 44px; height: 44px; cursor: pointer; font-size: 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); transition: all var(--transition); flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--gold); background: rgba(212,165,32,0.1); }
+
+@media (max-width: 900px) {
+  .nav-links a:not(.theme-toggle) { display: none; }
+  .nav-brand { font-size: 0.95rem; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  padding: 5rem 1.5rem 3rem;
+  background: radial-gradient(ellipse at 50% 80%, rgba(212,165,32,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 20%, rgba(232,146,42,0.08) 0%, transparent 50%),
+              var(--navy);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 500px; height: 500px; transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,165,32,0.2) 0%, rgba(212,165,32,0.05) 40%, transparent 70%);
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+}
+/* Orbit rings */
+.hero::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  width: 600px; height: 600px;
+  border: 1px solid rgba(212,165,32,0.08);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit-spin 40s linear infinite;
+}
+@keyframes orbit-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+.hero-content { position: relative; z-index: 2; }
+.hero h1 {
+  font-family: var(--font-serif); color: var(--cream);
+  font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700;
+  margin-bottom: 0.2em; letter-spacing: -0.02em;
+}
+.hero .hero-russian {
+  font-family: var(--font-serif); color: rgba(250,245,235,0.6);
+  font-size: clamp(1.3rem, 3vw, 2rem); font-weight: 400; font-style: italic;
+  margin-bottom: 1rem;
+}
+.hero .hero-dates {
+  color: var(--gold); font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 300; letter-spacing: 0.15em; margin-bottom: 1.5rem;
+}
+.hero .hero-titles {
+  color: rgba(250,245,235,0.7); font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  max-width: 700px; line-height: 1.8; letter-spacing: 0.04em;
+}
+.hero .hero-titles span { color: var(--gold-light); }
+.hero .scroll-hint {
+  position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+  color: rgba(250,245,235,0.3); font-size: 1.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== LAYOUT ===== */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+.section-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: var(--section-shadow);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.section-label {
+  display: inline-block; font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.8rem;
+}
+
+/* ===== INFOBOX ===== */
+.bio-layout { display: grid; grid-template-columns: 1fr 320px; gap: 2.5rem; align-items: start; }
+@media (max-width: 860px) { .bio-layout { grid-template-columns: 1fr; } }
+
+.infobox {
+  background: var(--infobox-bg);
+  border: 2px solid var(--infobox-border);
+  border-radius: 12px; padding: 1.5rem;
+  font-size: 0.9rem; line-height: 1.6;
+  position: sticky; top: 80px;
+}
+@media (max-width: 860px) { .infobox { position: static; order: -1; } }
+.infobox-title {
+  font-family: var(--font-serif); font-size: 1.2rem;
+  text-align: center; margin-bottom: 0.3rem; color: var(--gold);
+}
+.infobox-subtitle {
+  text-align: center; font-size: 0.85rem; color: var(--text-secondary);
+  margin-bottom: 1rem; font-style: italic;
+}
+.infobox-photo {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover;
+  border-radius: 8px; margin-bottom: 1rem;
+}
+.infobox dl { display: grid; grid-template-columns: 110px 1fr; gap: 0.4rem 0.8rem; }
+.infobox dt { font-weight: 700; color: var(--text-secondary); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.infobox dd { color: var(--text); }
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 6px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(to bottom, var(--gold), var(--amber), transparent);
+}
+.timeline-item { position: relative; margin-bottom: 2rem; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -2rem; top: 0.5em;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--gold); border: 3px solid var(--bg);
+}
+.timeline-year {
+  font-family: var(--font-serif); font-weight: 700;
+  color: var(--gold); font-size: 1.1rem; margin-bottom: 0.3rem;
+}
+
+/* ===== BLOCKQUOTE ===== */
+blockquote {
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.5rem; margin: 1.5rem 0;
+  background: rgba(212,165,32,0.05);
+  border-radius: 0 8px 8px 0;
+  font-style: italic; color: var(--text-secondary);
+}
+blockquote cite { display: block; margin-top: 0.5rem; font-style: normal; font-weight: 700; font-size: 0.9rem; color: var(--gold); }
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.gallery-item {
+  border-radius: 12px; overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.gallery-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.gallery-item figcaption {
+  padding: 0.8rem 1rem; font-size: 0.85rem; color: var(--text-secondary);
+  background: var(--bg-card);
+}
+
+/* ===== PUBLICATIONS ===== */
+.pub-list { list-style: none; counter-reset: pub; }
+.pub-list li {
+  counter-increment: pub; padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  padding-left: 2.5rem; position: relative;
+}
+.pub-list li::before {
+  content: counter(pub); position: absolute; left: 0; top: 1rem;
+  font-family: var(--font-serif); font-weight: 700;
+  color: var(--gold); font-size: 1.1rem;
+}
+
+/* ===== FADE IN ===== */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center; padding: 3rem 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary); font-size: 0.85rem;
+}
+.footer a { color: var(--gold); }
+.footer-links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+
+/* ===== DECORATIVE SUN ===== */
+.sun-divider {
+  text-align: center; padding: 1rem 0; color: var(--gold); font-size: 1.5rem;
+  opacity: 0.4;
+}
+
+/* ===== UTILITIES ===== */
+.text-gold { color: var(--gold); }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+</style>
+</head>
+
+<body data-theme="light">
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">G.Ya. Umarov</a>
+    <div class="nav-links">
+      <a href="#biography">Biography</a>
+      <a href="#nuclear">Nuclear Physics</a>
+      <a href="#solar">Solar Energy</a>
+      <a href="#agriculture">Agriculture</a>
+      <a href="#aral">Aral Sea</a>
+      <a href="#culture">Culture</a>
+      <a href="#accolades">Accolades</a>
+      <a href="#publications">Works</a>
+      <a href="#gallery">Gallery</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☀️</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Giyas Umarov</h1>
+    <div class="hero-russian">Гияс Якубович Умаров</div>
+    <div class="hero-dates">1926 – 1998</div>
+    <div class="hero-titles">
+      <span>Founder of Heliotechnology in Uzbekistan</span> · Nuclear Physicist · Academician
+    </div>
+  </div>
+  <div class="scroll-hint">↓</div>
+</section>
+
+<!-- Biography Overview + Infobox -->
+<section class="section" id="biography">
+  <div class="container">
+    <div class="section-card fade-in">
+      <div class="bio-layout">
+        <div>
+          <span class="section-label">Biography</span>
+          <h2>The Scientist Who Chose Homeland</h2>
+          <p>Giyas Yakubovich Umarov was a man whose life traced the arc of a nation's scientific awakening. Born in Tashkent on December 25, he rose from a young Uzbek student in postwar Leningrad to become one of the most consequential scientists in Central Asian history — the first candidate of sciences in nuclear physics in all of Uzbekistan, and ultimately the founder of an entirely new field: heliotechnology, the science of harnessing the sun.</p>
+          <p>His path was marked by a singular conviction: that his homeland needed him more than Moscow's prestigious laboratories did. In 1949, having just defended a brilliant dissertation at Moscow State University — one that saw him debate Lev Landau himself over the mass of the neutrino — he was offered a coveted position in the capital. He declined. He returned to Tashkent, where he would spend the rest of his life building scientific infrastructure where none existed, training generations of researchers, and pursuing a vision of solar energy that the world would only catch up to decades later.</p>
+          <p>Over a career spanning five decades, he supervised 54 doctoral and candidate dissertations, authored four monographs and over 250 scientific articles, founded the journal <em>Heliotechnika</em> (still published internationally by Springer as <em>Applied Solar Energy</em>), and championed causes from the Large Solar Furnace near Tashkent to the rescue of the Aral Sea. His last scientific work was on maintaining stable plasma equilibrium in a tokamak — a man who, until his final days, dreamed of harnessing the power of plasma and the Sun to improve human life.</p>
+        </div>
+
+        <!-- Infobox -->
+        <aside class="infobox">
+          <img src="images/04-additional.jpg" alt="Academician G.Ya. Umarov" class="infobox-photo">
+          <div class="infobox-title">Giyas Yakubovich Umarov</div>
+          <div class="infobox-subtitle">Гияс Якубович Умаров</div>
+          <dl>
+            <dt>Born</dt><dd>December 25, 1926<br>Tashkent, Uzbek SSR</dd>
+            <dt>Died</dt><dd>1998</dd>
+            <dt>Nationality</dt><dd>Soviet / Uzbekistani</dd>
+            <dt>Fields</dt><dd>Nuclear Physics, Heliotechnology</dd>
+            <dt>Institutions</dt><dd>Radium Institute, JINR Dubna, FTI Tashkent, Academy of Sciences UzSSR</dd>
+            <dt>Known for</dt><dd>Founding heliotechnology in Uzbekistan; Large Solar Furnace; <em>Heliotechnika</em> journal</dd>
+            <dt>Awards</dt><dd>Order of Honor, Medal "For Distinguished Labor"</dd>
+            <dt>Spouse</dt><dd>Nabira Shamsieva<br><em>("Shams" = Sun)</em></dd>
+            <dt>Legacy</dt><dd>54 dissertations supervised, 250+ papers, 31 patents</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nuclear Physics Era -->
+<section class="section" id="nuclear" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">1946–1962</span>
+      <h2>The Nuclear Physics Era</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1946 — The Vavilov Encounter</div>
+          <p>The young Giyas Umarov traveled from Tashkent to Leningrad to pursue graduate studies in nuclear physics — a field virtually unknown in Uzbekistan. On the steps of the university, he had a chance meeting with Academician Sergei Ivanovich Vavilov, President of the USSR Academy of Sciences. Vavilov was struck by the young man's determination and personally arranged his admission to the legendary Radium Institute under Academician V.G. Khlopin.</p>
+          <p>During his first demonstration in Khlopin's laboratory, the equipment malfunctioned — no readings appeared. The young physicist was mortified. Khlopin simply smiled and said: <em>"That's called the Visit Effect"</em> — and accepted him as a graduate student on the spot.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1949 — The Landau Debate</div>
+          <p>At Moscow State University, Umarov prepared to defend his dissertation on nuclear physics — making him the first candidate of sciences in this field from Uzbekistan. During the pre-defense review, the great Lev Landau challenged his estimate of neutrino mass. The prevailing view placed it at 0.3–0.8 of electron mass. Umarov argued it was no more than 1/50 to 1/100 of the electron's mass — a position far closer to modern understanding.</p>
+          <blockquote>
+            "The dissertator remained with his opinion, and the opponent with his."
+            <cite>— Lev Landau's review of Umarov's dissertation</cite>
+          </blockquote>
+          <p>The MSU academic council voted unanimously — all 43 members — in Umarov's favor. Decades later, his research on neutrino mass was cited alongside 13 Nobel laureates in Zeldovich and Khlopov's landmark 1981 article in <a href="https://ufn.ru/en/articles/1981/9/b/" target="_blank">Uspekhi Fizicheskikh Nauk</a>.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1949 — The Choice</div>
+          <p>Offered a prestigious position in Moscow, the newly minted scientist made the decision that would define his legacy: he returned home to Tashkent. He wanted to build a family and build scientific capacity in his homeland. In the 1950s, he became the first to teach advanced physics in the Uzbek language at the Central Asian Polytechnic Institute.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1957 — JINR Dubna</div>
+          <p>He organized a group of Uzbek scientists at the <a href="https://www.jinr.ru/posts/map_maps/respublika-uzbekistan/" target="_blank">Joint Institute for Nuclear Research (JINR)</a> in Dubna — the "Soviet CERN." There he developed a beta-spectrograph on a permanent magnet, work that would lead to his first monograph.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1958 — The Kurchatov Connection</div>
+          <p>Under the direction of Igor Vasilyevich Kurchatov, the father of the Soviet atomic program, Umarov organized a plasma laboratory at the Physical-Technical Institute in Tashkent. Kurchatov personally arranged for two railway wagons of equipment to be sent from Moscow — an extraordinary gesture of support for frontier science in Central Asia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solar Energy Pioneer -->
+<section class="section" id="solar">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">1963–Onwards</span>
+      <h2>Solar Energy Pioneer</h2>
+
+      <p>Beginning in 1963, Umarov made a dramatic pivot — from nuclear physics to the science of the sun. He recognized that Uzbekistan, blessed with over 300 days of sunshine per year, held the key to a different kind of energy revolution. He founded the Helio Department at the Physical-Technical Institute, comprising four laboratories and a design bureau, and began transforming Tashkent into what colleagues called <strong>"the Mecca of heliotechnicians."</strong></p>
+
+      <h3 class="mt-2">The Journal <em>Heliotechnika</em></h3>
+      <p>He founded the scientific journal <em>Heliotechnika</em>, which became the premier Soviet publication on solar energy. It continues to this day, republished in the United States by <a href="https://link.springer.com/journal/11949" target="_blank">Springer as <em>Applied Solar Energy</em></a> — a lasting testament to the field he created.</p>
+
+      <h3 class="mt-2">UNESCO Paris, 1973</h3>
+      <p>In 1973, Umarov represented the Soviet Union at the UNESCO symposium <strong>"The Sun at the Service of Humanity"</strong> in Paris. During this trip, he visited the Solar Furnace at Odeillo in the French Pyrenees — an experience that ignited his vision for building something even grander in Uzbekistan. That same year, he published his celebrated book <em>"Biruni, Copernicus, and Modern Science,"</em> tracing the deep Central Asian roots of astronomical and heliocentric thought.</p>
+
+      <h3 class="mt-2">The Birthday Presentation</h3>
+      <p>As early as 1954, at an All-Union Conference, Umarov had proposed a tower-type solar power plant with a heliostat field — a design now used worldwide. After seeing Odeillo, he championed a far more ambitious project: a Large Solar Furnace (LSF) for Uzbekistan.</p>
+      <p>In 1975, he demonstrated the principle to V.A. Kirillin, Chairman of the State Committee for Science and Technology. Then came the decisive moment: a presentation to the Military-Industrial Commission, chaired by D.F. Ustinov (the future Minister of Defense). <strong>The date was December 25 — Umarov's birthday.</strong></p>
+      <p>The result was historic: on May 5, 1976, the CPSU Central Committee and the USSR Council of Ministers adopted a resolution to build the <a href="https://en.wikipedia.org/wiki/Solar_furnace_of_Uzbekistan" target="_blank">Large Solar Furnace</a> near Tashkent. The LSF was completed in 1987, under the leadership of Academician S.A. Azimov — one of the most powerful solar concentrators in the world, and a monument to Umarov's vision.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Agricultural Innovation -->
+<section class="section" id="agriculture" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Applied Science</span>
+      <h2>Agricultural Innovation</h2>
+      <p>Umarov understood that solar energy had to serve not just laboratories but the lives of ordinary people — especially in Uzbekistan's vast agricultural heartland. His applied research bridged physics and farming in ways that were decades ahead of their time:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border);"><strong style="color: var(--gold);">☀️ Solar Drying</strong> — Developed methods for solar drying of agricultural products, reducing dependence on expensive and polluting fuel-based processes.</li>
+        <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border);"><strong style="color: var(--gold);">🌱 Cotton Irradiation</strong> — Pioneered pulsed irradiation of cotton seeds and plants to improve yield and accelerate early ripening — critical in Uzbekistan's cotton-dependent economy.</li>
+        <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border);"><strong style="color: var(--gold);">💧 Solar Desalination</strong> — Applied solar energy to desalinate water in arid regions, providing clean water where it was most needed.</li>
+        <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border);"><strong style="color: var(--gold);">🎞️ Photo-Destructive Films</strong> — Developed photo-destructive polymeric films for mulching cotton fields — biodegradable coverings that harness sunlight itself.</li>
+        <li style="padding: 0.8rem 0; border-bottom: 1px solid var(--border);"><strong style="color: var(--gold);">🌾 Ridge-Profiled Cotton Beds</strong> — Collaborated with Prof. S.P. Pulatov on ridge-profiled cotton beds for optimized growth.</li>
+        <li style="padding: 0.8rem 0;"><strong style="color: var(--gold);">🌡️ Heated Irrigation Water</strong> — In 1988, patented a device for selecting heated water from the upper layers of reservoirs for irrigation — using the sun's natural thermal stratification.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- The Aral Sea -->
+<section class="section" id="aral">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Environmental Legacy</span>
+      <h2>The Fight for the Aral Sea</h2>
+      <p>The catastrophic shrinking of the Aral Sea — one of the greatest environmental disasters of the 20th century — was a cause Umarov took deeply personally. As a member of the Committee for Restoration of the Aral Sea, he fought tirelessly to raise the alarm.</p>
+      <p>He addressed Soviet President Mikhail Gorbachev directly, urging decisive action to save what had once been the world's fourth-largest lake. His letters laid out the ecological, agricultural, and human costs of the Aral's destruction with the rigor of a scientist and the passion of a citizen who loved his land.</p>
+      <p>Though the Aral Sea's fate would ultimately be one of tragedy, Umarov's advocacy helped lay the groundwork for the international attention and restoration efforts that continue to this day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cultural Legacy -->
+<section class="section" id="culture" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Culture & Heritage</span>
+      <h2>Cultural Legacy</h2>
+
+      <h3>The Suzani Connection</h3>
+      <p>In Uzbek culture, the <em>suzani</em> is an ancient embroidered textile whose cosmic motifs — suns, planets, moons, and spirals — represent the concept of <em>falak</em> (the sky). The Umarov family suzani features a large sun at its center, with smaller discs bearing spiral patterns arranged on "orbits" around it. According to legend, the first "sun and moon" suzani was created by the bride of a student of Mirzo Ulugbek, the great 15th-century astronomer-king of Samarkand.</p>
+      <p>That a nuclear physicist who devoted his life to the sun should come from a family whose most treasured textile depicts the solar system is one of those coincidences that feels like destiny.</p>
+
+      <h3 class="mt-2">Nabira Shamsieva — "The Sun"</h3>
+      <p>Umarov's wife was Nabira Shamsieva (Шамсиева), whose family name derives from <em>Shams</em> — the Arabic and Persian word for "Sun." A man whose life's work was the sun, married to a woman whose very name means the sun, surrounded by a textile that depicts the sun. The poetic resonance is inescapable.</p>
+
+      <h3 class="mt-2">Biruni, Copernicus, and Modern Science</h3>
+      <p>In 1973, Umarov published <em>"Biruni, Copernicus, and Modern Science"</em>, exploring the intellectual lineage from the great Central Asian polymath Abu Rayhan al-Biruni through Copernicus to the modern understanding of the cosmos. The book was later translated into English as <em>"At the Crossroads of the Millennium"</em> (2001), making the case that the roots of heliocentric thought run deep through Central Asian soil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Accolades & Recognition -->
+<section class="section" id="accolades">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Recognition</span>
+      <h2>Accolades & Recognition</h2>
+
+      <blockquote>
+        "His research was 50–60 years ahead of its time, and now we see how his bold ideas are being realized. Therefore, we all consider him our mentor."
+        <cite>— Prof. Daniel Alpert (USA), speaking at Davos, 1990</cite>
+      </blockquote>
+
+      <h3 class="mt-2">Awards</h3>
+      <ul style="list-style: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li>Order of Honor (USSR)</li>
+        <li>Medal "For Distinguished Labor"</li>
+        <li>Honorary diplomas from scientific institutions</li>
+        <li>Research cited alongside 13 Nobel laureates (Zeldovich & Khlopov, 1981)</li>
+      </ul>
+
+      <h3>Institutional Roles</h3>
+      <ul style="list-style: disc; padding-left: 1.5rem;">
+        <li>Member, Scientific Council of USSR Academy of Sciences — "Exploring new ways of using solar energy"</li>
+        <li>Member, Scientific Council of State Committee for Science and Technology of USSR on energy</li>
+        <li>Member, Bureau of Central Scientific and Technical Society of Ministry of Energy of USSR</li>
+        <li>Chairman, Problem Council on Heliotechnics of Academy of Sciences of Uzbek SSR</li>
+        <li>Deputy Chief Editor, journal <em>Heliotechnika</em></li>
+        <li>Member, Committee for Restoration of Aral Sea</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Publications -->
+<section class="section" id="publications" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Selected Works</span>
+      <h2>Publications</h2>
+      <p style="margin-bottom: 1.5rem;">Author of 4 monographs, 6 popular science books, over 250 scientific articles, and 31 copyright certificates (patents).</p>
+
+      <ol class="pub-list">
+        <li><strong>"Beta-Spectrographs with Permanent Magnets"</strong><br>A.A. Abdurazzakov, G.M. Gromov, G.Ya. Umarov (1970)</li>
+        <li><strong>"Biruni, Copernicus, and Modern Science"</strong><br>G.Ya. Umarov (1973) · Translated to English as <em>"At the Crossroads of the Millennium"</em> (2001)</li>
+        <li><strong>"Solar Energy"</strong><br>G.Ya. Umarov, A.M. Ershov (Moscow, 1974)</li>
+        <li><strong>"Use of Low-Potential Solar Installations"</strong><br>G.Ya. Umarov (1976)</li>
+        <li><strong>"Theory and Calculation of Heliotechnical Concentrating Systems"</strong><br>G.Ya. Umarov, R.A. Zakhidov, A.A. Vainer (1977)</li>
+      </ol>
+
+      <p class="mt-2">His biographical book was written by Anatoly Ershov (Moscow, 1996), reissued in the USA in 2001, and is being republished in Uzbek for the centennial anniversary.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Gallery</span>
+      <h2>Photographs</h2>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="images/01-heliopolygon-demo.jpg" alt="G.Ya. Umarov demonstrating Solar Furnace to officials, 1975">
+          <figcaption>Demonstrating the Solar Furnace principle to officials, 1975</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/04-additional.jpg" alt="Academician G.Ya. Umarov">
+          <figcaption>Academician Giyas Yakubovich Umarov</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/03-suzani.jpg" alt="Nabira Shamsieva with the family suzani">
+          <figcaption>Nabira Shamsieva with the Umarov family suzani</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/02-background.jpg" alt="Solar energy research">
+          <figcaption>Solar energy research in Uzbekistan</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Family Legacy -->
+<section class="section" id="family" style="background: var(--bg-alt);">
+  <div class="container">
+    <div class="section-card fade-in">
+      <span class="section-label">Family</span>
+      <h2>Family Legacy</h2>
+      <p>The scientific tradition Giyas Umarov established did not end with him. His son, Professor G.G. Umarov, continued in the field, co-authoring the memorial text that preserves his father's legacy for future generations. Alongside Academician R.A. Zakhidov — his longtime collaborator and co-author — they ensured that the story of Uzbekistan's solar energy pioneer would not be forgotten.</p>
+      <p>The Umarov family carries forward not just a name, but a conviction: that science, pursued with integrity and devotion to one's homeland, can change the world. From nuclear physics to the power of the sun, from the laboratories of Leningrad to the solar furnaces of Tashkent, the legacy of Giyas Yakubovich Umarov endures — in the institutions he built, the students he trained, the journal that still bears his vision, and the family that carries his name.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>In memory of Academician Giyas Yakubovich Umarov (1926–1998)</p>
+  <p style="margin-top: 0.3rem;">Created with love by the Umarov family</p>
+  <div class="footer-links">
+    <a href="https://www.giyasumarov.org/" target="_blank">Original Memorial Site</a>
+    <a href="https://ru.wikipedia.org/wiki/Умаров,_Гияс_Якубович" target="_blank">Wikipedia (Russian)</a>
+    <a href="https://en.wikipedia.org/wiki/Solar_furnace_of_Uzbekistan" target="_blank">Solar Furnace of Uzbekistan</a>
+    <a href="https://link.springer.com/journal/11949" target="_blank">Applied Solar Energy (Springer)</a>
+  </div>
+</footer>
+
+<script>
+// Theme toggle
+const toggle = document.getElementById('themeToggle');
+const stored = localStorage.getItem('theme');
+if (stored) document.body.setAttribute('data-theme', stored);
+else if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.body.setAttribute('data-theme', 'dark');
+function updateIcon() { toggle.textContent = document.body.getAttribute('data-theme') === 'dark' ? '🌙' : '☀️'; }
+updateIcon();
+toggle.addEventListener('click', () => {
+  const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  document.body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  updateIcon();
+});
+
+// Fade-in on scroll with fallback
+const faders = document.querySelectorAll('.fade-in');
+if ('IntersectionObserver' in window) {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  faders.forEach(f => obs.observe(f));
+}
+// Fallback: ensure all visible after 1.5s
+setTimeout(() => { faders.forEach(f => f.classList.add('visible')); }, 1500);
+</script>
+</body>
+</html>
